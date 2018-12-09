@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'bootstrap/bootstrap.min';
+
+body {
+  background-color: #212529;
+  color: #c0c0c0;
+}
+nav {
+  background-color: #212529;
+}
