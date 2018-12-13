@@ -1,25 +1,114 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
 @import 'bootstrap/bootstrap.min';
 
 body {
-  background-color: #212529;
-  color: #c0c0c0;
+  background: #f3f3f4;
 }
 nav {
   background-color: #212529;
+}
+
+a {
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.ibox{
+  clear: both;
+  margin-bottom: 25px;
+  margin-top: 0;
+  padding: 0;
+  
+}
+.ibox-content{
+  clear: both;
+  background-color: #ffffff;
+  color: inherit;
+  padding: 15px 20px 20px 20px;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0;
+}
+.small{
+  font-size: 85%;
+}
+.text-muted {
+  color: #888;
+}
+.m-t{
+  margin-top: 15px
+}
+.btn-xs {
+  padding: 1px 5px;
+  font-size: 80%;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.btn-primary {
+  color: #1ab394;
+}
+
+.btn-white {
+  color: inherit;
+  border: 1px solid #e7eaec;
+}
+.product-box{
+  padding: 0;
+  border: 1px solid #e7eaec;
+  &:active, &:hover {
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 3px 7px 0 #a8a8a8;
+    -moz-box-shadow: 0 3px 7px 0 #a8a8a8;
+    box-shadow: 0 3px 7px 0 #a8a8a8;
+  }
+  .product-imitation{
+    text-align: center;
+    padding: 90px 0;
+    background-color: #f8f8f9;
+    color: #bebec3;
+    font-weight: 600;
+  }
+  .product-desc {
+    padding: 20px;
+    position: relative;
+  }
+  .product-name{
+    font-size: 1em;
+    font-weight: 600;
+    color: #676a6c;
+    display: block;
+    margin: 2px 0 5px 0;
+    white-space:nowrap;
+  }
+  .product-price{
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #1ab394;
+    padding: 6px 12px;
+    position: absolute;
+    top: -32px;
+    right: 0;
+  }
+}
+.product-image img {
+  width: 348px;
+  height: 225px;
 }

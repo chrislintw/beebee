@@ -1,0 +1,38 @@
+<h1>Products</h1>
+<div class="ibox">
+  <div class="ibox-content">
+    <div class="text-right">
+      <%= link_to '新增', new_admin_product_path, class: 'btn-xs btn-success' %>
+    </div>
+    <table class="table table-striped ">
+      <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product.name %></td>
+            <td><%= product.price %></td>
+            <td><%= product.discount %></td>
+            <td>
+              <%= link_to '查看', product %>
+              <%= link_to '編輯', edit_admin_product_path(product) %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+      <tfoot>
+        <tr colspan="5">
+          <td>
+            <%= paginate @products %>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

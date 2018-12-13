@@ -1,0 +1,38 @@
+<h1>Users</h1>
+<div class="ibox">
+  <div class="ibox-content">
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Admin</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <%= render 'user_row', user: user %>
+            <td class="text-right">
+              <div class="btn-group">
+
+                <%= link_to 'Show',  user, class: 'btn-white btn btn-xs' %>
+
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+      <tfoot>
+        <tr colspan="4">
+          <td>
+            <%= paginate @users %>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

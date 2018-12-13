@@ -6,9 +6,7 @@ class User < ApplicationRecord
   has_many :products, foreign_key: :created_by_id
   validates :name, presence: true, length: { maximum: 255 }
 
-
   def upgrade!
     update(primium: true)
   end
-  
 end

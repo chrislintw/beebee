@@ -1,5 +1,22 @@
 Rails.application.routes.draw do
-  devise_for :users
+  ## Normal User
   root 'static_pages#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users
+  resources :products, only: %i[index show]
+  resource :profile, only: %i[show edit update] do
+    collection do
+      put :upgrade
+    end
+  end
+
+  ## Admin
+  namespace :admin, path: 'users/yoo' do
+    root 'static_pages#index'
+    resources :products
+    resources :users, only: %i[index show] do 
+      member do
+        put :change_role
+      end
+    end
+  end
 end

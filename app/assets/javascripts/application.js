@@ -16,3 +16,8 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap/bootstrap.min.js
+//= require holder/holder.min.js
+
+$(document).bind("turbolinks:load", function() {
+  Holder.run();
+});

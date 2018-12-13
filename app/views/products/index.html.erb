@@ -1,0 +1,40 @@
+<h1>Products</h1>
+<%= "Search: #{params[:q]}" if params[:q] %>
+
+<div class="search-form">
+  
+</div>
+
+<% @products.in_groups_of(3,false) do |group| %>
+
+<div class="row">
+  
+  <% group.each do |product| %>
+  <div class="search-result col-md-4 ">
+    <div class="ibox">
+
+      <div class="ibox-content product-box">
+        <% if product.image.attached? %>
+        <div class="product-image">
+          <%= image_tag url_for(product.image) %>
+        </div>
+        <% else %>
+          <div class="product-imitation">
+            <%= product.name %>
+          </div>
+        <% end %>
+        <div class="product-desc">
+          <span class="product-price"><%= display_price product %></span>
+            <small class="text-muted">Hot</small>
+            <%= link_to product.name, product, class: 'product-name' %>
+            <div class="m-t text-righ">
+              <%= link_to 'Info', product, class: 'btn btn-outline-success  btn-primary btn-xs' %>
+            </div>
+          </div>
+        </div> 
+      </div>
+  </div>
+  <% end %>
+</div>
+<% end %>
+<%= paginate @products %>

@@ -1,0 +1,6 @@
+<h1>Hello <%= @user.name %></h1>
+<p>email: <%= @user.email %></p>
+<p>Primium: <%= @user.primium ? '是' : '否' %></p>
+
+<%= link_to('Upgrade to primium', upgrade_profile_path, method: :put) unless @user.primium %> <br />
+<%= link_to 'Edit', edit_profile_path %>

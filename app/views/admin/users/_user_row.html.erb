@@ -1,0 +1,8 @@
+<td id="<%= dom_id user %>">
+  <% text = user.admin ? 'Yes' : 'No' %>
+  <% if user.id == current_user.id %>
+    <%= text %>
+  <% else %>
+    <%= link_to text, change_role_admin_user_path(user), method: :put, remote: true, class: 'btn-white btn btn-xs ' %>
+  <% end %>
+</td>
