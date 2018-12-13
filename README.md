@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository is only test.
 
-Things you may want to cover:
+## Install
 
-* Ruby version
+``` bash
+  cp config/database.yml.example config/database.yml
+  echo 'b2b058bf450654395cbd8236e48d15f4' > config/master.key
+  rails db:create db:migrate db:seed
+```
 
-* System dependencies
+## Demo Server
 
-* Configuration
+Goto: [demo](https://lucifer.app)
 
-* Database creation
+### Admin User
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+``` yaml
+  email: can@can.com
+  password: 123123
+```
