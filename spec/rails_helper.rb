@@ -56,6 +56,8 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   config.include ActiveSupport::Testing::TimeHelpers
   config.include FactoryBot::Syntax::Methods
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :feature
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction

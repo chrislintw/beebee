@@ -1,15 +1,15 @@
 <div class="ibox">
   <div class="ibox-content">
-      <h1><%= @product.name %></h1>
+      <h1><%= @admin_product.name %></h1>
       <p>
-        價錢: <%= @product.price %>
+        價錢: <%= @admin_product.price %>
       </p>
       <p>
-        折扣: <%= @product.discount %>
+        折扣: <%= @admin_product.discount %>
       </p>
       <%= link_to '回列表', admin_products_path %>
-      <%= link_to '編輯', edit_admin_product_path(@product) %>
-      <%= link_to '刪除', @product, method: :delete, confirm: '確定刪除?'%>
+      <%= link_to '編輯', edit_admin_product_path(@admin_product) %>
+      <%= link_to '刪除', @admin_product, method: :delete, confirm: '確定刪除?'%>
   </div>
 </div>
 
