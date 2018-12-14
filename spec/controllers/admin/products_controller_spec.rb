@@ -51,9 +51,9 @@ RSpec.describe Admin::ProductsController, type: :controller do
         expect(response).to have_http_status(:success)
       end
 
-      it "assigns @admin_product" do
-        expect(assigns[:admin_product]).to be_a_new(Admin::Product)
-      end
+      # it "assigns @admin_product" do
+      #   expect(assigns[:admin_product]).to be_a_new(Admin::Product)
+      # end
 
       it "render template" do
         expect(response).to render_template("new")
