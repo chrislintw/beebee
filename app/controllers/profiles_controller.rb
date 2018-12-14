@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_user, only: %i[show edit update upgrade]
-
   def show; end
 
   def edit; end
