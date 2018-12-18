@@ -69,3 +69,4 @@ gem 'devise'
 gem 'simple_form'
 
 gem 'kaminari'
+gem 'line-bot-api'

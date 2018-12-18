@@ -19,4 +19,11 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :line_bot, only: [] do
+    collection do
+      post :callback
+      get :callback
+    end
+  end
 end
