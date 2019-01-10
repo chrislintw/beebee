@@ -1,0 +1,10 @@
+<%= simple_form_for User.new , url: root_path do |f| %>
+  <h3>Request Detail</h3>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <h3>Customer Info</h3>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :phone %>
+  <%= f.submit '確認訂單' %>
+<% end %>

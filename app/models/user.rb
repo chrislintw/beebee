@@ -9,4 +9,10 @@ class User < ApplicationRecord
   def upgrade!
     update(primium: true)
   end
+  def price
+  end
+  def phone
+  end
+  def description
+  end
 end

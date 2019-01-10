@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   ## Normal User
   root 'static_pages#index'
+  get 'new_request', to: 'static_pages#new_request'
   devise_for :users
   resources :products, only: %i[index show]
   resource :profile, only: %i[show edit update] do
